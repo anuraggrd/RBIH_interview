@@ -2,12 +2,13 @@ package com.lending.loan_offer_service.platform.dto;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class LoanApplicationRequest {
-    @NotBlank(message = "Application details are required")
+    @NotNull(message = "Application details are required")
     @Valid
     private ApplicationRequest applicant;
-    @NotBlank(message = "Loan details are required")
+    @NotNull(message = "Loan details are required")
     @Valid
     private LoanRequest loan;
 

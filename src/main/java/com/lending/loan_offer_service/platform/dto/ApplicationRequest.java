@@ -6,20 +6,25 @@ import jakarta.validation.constraints.*;
 import java.math.BigDecimal;
 
 public class ApplicationRequest {
+
     @NotBlank(message = "Applicant name is required")
     private String name;
-    @NotBlank(message = "Applicant name is required")
-    @Min(value =21, message = "Age but be greater than eqaul to 21" )
-    @Max(value =60, message = "Age but be at most 60" )
+
+    @NotNull(message = "Age is required")
+    @Min(value = 21, message = "Age must be at least 21")
+    @Max(value = 60, message = "Age must be at most 60")
     private Integer age;
-    @NotNull(message = "monthly income is required")
-    @DecimalMin(value ="0.1" ,message= "Mothly income must be greater than 0")
+
+    @NotNull(message = "Monthly income is required")
+    @DecimalMin(value = "0.1", message = "Monthly income must be greater than 0")
     private BigDecimal monthlyIncome;
-    @NotNull(message = "Employment Type is required")
+
+    @NotNull(message = "Employment type is required")
     private EmploymentType employmentType;
-    @NotBlank(message = "Applicant name is required")
-    @Min(value =300, message = "creditScore must be greater than eqaul to 300" )
-    @Min(value =900, message = "creditScore must be at most 900 " )
+
+    @NotNull(message = "Credit score is required")
+    @Min(value = 300, message = "Credit score must be at least 300")
+    @Max(value = 900, message = "Credit score must be at most 900")
     private Integer creditScore;
 
     public String getName() {
@@ -61,9 +66,4 @@ public class ApplicationRequest {
     public void setCreditScore(Integer creditScore) {
         this.creditScore = creditScore;
     }
-
-
-
-
-
 }

@@ -10,6 +10,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "loan_applications")
 public class LoanApplicationEntity {
+    @Id
     private UUID id;
     private String ApplicantName;
     private Integer age;

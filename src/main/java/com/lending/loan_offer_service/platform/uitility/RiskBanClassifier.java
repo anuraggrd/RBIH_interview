@@ -1,7 +1,9 @@
 package com.lending.loan_offer_service.platform.uitility;
 
 import com.lending.loan_offer_service.platform.domain.RiskBand;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RiskBanClassifier {
 
     public RiskBand classify(int creditScore){
