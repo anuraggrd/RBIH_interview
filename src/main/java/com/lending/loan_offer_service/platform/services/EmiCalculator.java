@@ -1,10 +1,17 @@
 package com.lending.loan_offer_service.platform.services;
 
+import org.springframework.stereotype.Component;
+
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 
+/**
+ * standard reducing - balance EMI.
+ * EMI= p * r *(1+r)^n/((1+r)^n -1
+ */
 
+@Component
 public class EmiCalculator {
 
     private static final int SCALE = 2;
