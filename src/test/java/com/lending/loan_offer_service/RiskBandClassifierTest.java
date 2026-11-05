@@ -1,7 +1,7 @@
 package com.lending.loan_offer_service;
 
 import com.lending.loan_offer_service.platform.domain.RiskBand;
-import com.lending.loan_offer_service.platform.services.RiskBanClassifier;
+import com.lending.loan_offer_service.platform.uitility.RiskBanClassifier;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -2,7 +2,7 @@ package com.lending.loan_offer_service;
 
 import com.lending.loan_offer_service.platform.domain.EmploymentType;
 import com.lending.loan_offer_service.platform.domain.RiskBand;
-import com.lending.loan_offer_service.platform.services.InterestRateCalculator;
+import com.lending.loan_offer_service.platform.uitility.InterestRateCalculator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

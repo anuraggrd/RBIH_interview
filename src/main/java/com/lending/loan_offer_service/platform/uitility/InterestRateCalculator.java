@@ -1,4 +1,4 @@
-package com.lending.loan_offer_service.platform.services;
+package com.lending.loan_offer_service.platform.uitility;
 
 import com.lending.loan_offer_service.platform.constant.LoanPricingConstant;
 import com.lending.loan_offer_service.platform.domain.EmploymentType;

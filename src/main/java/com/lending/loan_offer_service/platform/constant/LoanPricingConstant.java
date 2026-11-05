@@ -10,4 +10,5 @@ public class LoanPricingConstant {
     public static final Integer MIN_ELIGIBLE_CREDIT_SCORE = 600 ;
     public static final BigDecimal ELIGIBILITY_EMI_INCOME_RATIO = new BigDecimal("0.60");
     public static final long MAX_AGE_PLUSE_TENURE_YEARS = 65 ;
+    public static final BigDecimal OFFER_EMI_INCOME_RATIO = new BigDecimal("0.50"); ;
 }

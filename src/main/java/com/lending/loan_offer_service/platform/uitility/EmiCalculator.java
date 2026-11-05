@@ -1,4 +1,4 @@
-package com.lending.loan_offer_service.platform.services;
+package com.lending.loan_offer_service.platform.uitility;
 
 import org.springframework.stereotype.Component;
 
@@ -18,7 +18,7 @@ public class EmiCalculator {
     private static final RoundingMode ROUNDING = RoundingMode.HALF_UP;
     private static final MathContext MATH_CTX = new MathContext(16,RoundingMode.HALF_UP);
 
-    public BigDecimal calcuate(BigDecimal principal, BigDecimal annualRatePercent, int tenureMonths){
+    public BigDecimal calculate(BigDecimal principal, BigDecimal annualRatePercent, int tenureMonths){
         if(tenureMonths<0){
             throw new IllegalArgumentException("TenureMonth must be possitive");
         }

@@ -1,16 +1,17 @@
 package com.lending.loan_offer_service.platform.enity;
 
 import com.lending.loan_offer_service.platform.domain.*;
-import jakarta.persistence.Column;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Lob;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.UUID;
 
-public class LoanAppplicationEnity {
-    private String applicationName;
+@Entity
+@Table(name = "loan_applications")
+public class LoanApplicationEntity {
+    private UUID id;
+    private String ApplicantName;
     private Integer age;
     private BigDecimal monthlyIncome;
     @Enumerated(EnumType.STRING)
@@ -21,7 +22,7 @@ public class LoanAppplicationEnity {
     @Enumerated(EnumType.STRING)
     private Loanpurpose loanpurpose;
     @Enumerated(EnumType.STRING)
-    private ApplicationStatus staus;
+    private ApplicationStatus status;
 
     @Enumerated(EnumType.STRING)
     private RiskBand riskBand;
@@ -35,12 +36,12 @@ public class LoanAppplicationEnity {
     private String rejectionReasons;
     private Instant createdAt;
 
-    public String getApplicationName() {
-        return applicationName;
+    public String getApplicantName() {
+        return ApplicantName;
     }
 
-    public void setApplicationName(String applicationName) {
-        this.applicationName = applicationName;
+    public void setApplicantName(String applicantName) {
+        this.ApplicantName = applicantName;
     }
 
     public Integer getAge() {
@@ -99,12 +100,12 @@ public class LoanAppplicationEnity {
         this.loanpurpose = loanpurpose;
     }
 
-    public ApplicationStatus getStaus() {
-        return staus;
+    public ApplicationStatus getStatus() {
+        return status;
     }
 
-    public void setStaus(ApplicationStatus staus) {
-        this.staus = staus;
+    public void setStatus(ApplicationStatus status) {
+        this.status = status;
     }
 
     public RiskBand getRiskBand() {
@@ -153,5 +154,13 @@ public class LoanAppplicationEnity {
 
     public void setCreatedAt(Instant createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 }

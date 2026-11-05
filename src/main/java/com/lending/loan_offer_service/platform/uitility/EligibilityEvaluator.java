@@ -1,4 +1,4 @@
-package com.lending.loan_offer_service.platform.services;
+package com.lending.loan_offer_service.platform.uitility;
 
 import com.lending.loan_offer_service.platform.constant.LoanPricingConstant;
 import com.lending.loan_offer_service.platform.domain.RejectionReason;
@@ -31,7 +31,7 @@ public class EligibilityEvaluator {
         if (agePlustenure.compareTo(BigDecimal.valueOf(LoanPricingConstant.MAX_AGE_PLUSE_TENURE_YEARS)) > 0) {
             reasons.add(RejectionReason.AGE_TENURE_LIMIT_EXCEEDED);
         }
-        BigDecimal baseEmi = emiCalculator.calcuate(
+        BigDecimal baseEmi = emiCalculator.calculate(
                 loan.getAmount(),
                 LoanPricingConstant.BASE_ANNUAL_RATE,
                 loan.getTenureMonth());

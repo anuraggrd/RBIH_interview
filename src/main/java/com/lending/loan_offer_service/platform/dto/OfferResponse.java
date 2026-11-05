@@ -4,14 +4,14 @@ import java.math.BigDecimal;
 
 public class OfferResponse {
     private BigDecimal interestRate;
-    private BigDecimal tenurMonths;
+    private Integer tenurMonths;
     private BigDecimal emi;
-    private Integer totalPayable;
+    private BigDecimal totalPayable;
 
     public OfferResponse() {
     }
 
-    public OfferResponse(BigDecimal interestRate, BigDecimal tenurMonths, BigDecimal emi, Integer totalPayable) {
+    public OfferResponse(BigDecimal interestRate, Integer tenurMonths, BigDecimal emi, BigDecimal totalPayable) {
         this.interestRate = interestRate;
         this.tenurMonths = tenurMonths;
         this.emi = emi;
@@ -26,11 +26,11 @@ public class OfferResponse {
         this.interestRate = interestRate;
     }
 
-    public BigDecimal getTenurMonths() {
+    public Integer getTenurMonths() {
         return tenurMonths;
     }
 
-    public void setTenurMonths(BigDecimal tenurMonths) {
+    public void setTenurMonths(Integer tenurMonths) {
         this.tenurMonths = tenurMonths;
     }
 
@@ -42,11 +42,11 @@ public class OfferResponse {
         this.emi = emi;
     }
 
-    public Integer getTotalPayable() {
+    public BigDecimal getTotalPayable() {
         return totalPayable;
     }
 
-    public void setTotalPayable(Integer totalPayable) {
+    public void setTotalPayable(BigDecimal totalPayable) {
         this.totalPayable = totalPayable;
     }
 

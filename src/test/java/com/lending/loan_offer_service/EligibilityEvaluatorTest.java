@@ -5,8 +5,8 @@ import com.lending.loan_offer_service.platform.domain.Loanpurpose;
 import com.lending.loan_offer_service.platform.domain.RejectionReason;
 import com.lending.loan_offer_service.platform.dto.ApplicationRequest;
 import com.lending.loan_offer_service.platform.dto.LoanRequest;
-import com.lending.loan_offer_service.platform.services.EligibilityEvaluator;
-import com.lending.loan_offer_service.platform.services.EmiCalculator;
+import com.lending.loan_offer_service.platform.uitility.EligibilityEvaluator;
+import com.lending.loan_offer_service.platform.uitility.EmiCalculator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

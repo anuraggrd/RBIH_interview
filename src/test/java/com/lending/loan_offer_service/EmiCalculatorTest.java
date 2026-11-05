@@ -1,6 +1,6 @@
 package com.lending.loan_offer_service;
 
-import com.lending.loan_offer_service.platform.services.EmiCalculator;
+import com.lending.loan_offer_service.platform.uitility.EmiCalculator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +17,7 @@ public class EmiCalculatorTest {
     }
     @Test
     void calculatesEmiforKnownInputs(){
-        BigDecimal emi = calculator.calcuate(new BigDecimal("500000"), new BigDecimal("12.00"),36);
+        BigDecimal emi = calculator.calculate(new BigDecimal("500000"), new BigDecimal("12.00"),36);
         assertEquals(new BigDecimal("16607.15"), emi);
     }
     @Test
